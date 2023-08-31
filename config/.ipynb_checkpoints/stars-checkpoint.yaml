@@ -1,0 +1,39 @@
+description: stars
+tasks:
+  isr:
+    class: lsst.ip.isr.isrTask.IsrTask
+    config:
+      connections.ccdExposure: 'raw'
+      connections.bias: 'bias'
+      connections.newBFKernel: 'bfk'
+      connections.outputExposure: 'postISRCCD'
+      doWrite: true
+      doOverscan: true
+      doAssembleCcd: true
+      doBias: true
+      doVariance: true
+      doLinearize: False
+      doCrosstalk: false
+      doBrighterFatter: false
+      doDark: true
+      doStrayLight: false
+      doFlat: true
+      doFringe: false
+      #doApplyGains: true
+      usePtcGains: false
+      brighterFatterApplyGain: true
+      doFluxConservingBrighterFatterCorrection: True
+      doDefect: true
+      doNanMasking: true
+      doInterpolate: false
+      doSaturation: false
+      doSaturationInterpolation: false
+      growSaturationFootprintSize: 0
+      doDeferredCharge: false
+      brighterFatterMaxIter: 10
+      overscan.fitType: 'MEDIAN_PER_ROW' 
+  characterizeSpots:
+    class: mixcoatl.characterizeSpots.CharacterizeSpotsTask
+    config:
+      connections.exposure: 'postISRCCD'
+      connections.sourceCat: 'spotSrc'
