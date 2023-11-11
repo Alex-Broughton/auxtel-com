@@ -1,0 +1,80 @@
+description:
+  Base Pipeline for Data Release Production process, with full multi-epoch
+  calibration and characterizations.
+
+  Never run this pipeline or any of its subsets directly; always use those in
+  the 'pipelines' directory (or create a custom one) instead.
+imports:
+  - location: /sdf/home/a/abrought/auxtel-com/config/DRP-minimal-calibration.yaml
+    exclude:
+      - writeSourceTable  # cannot reconfigure because different dimensions.
+tasks:
+  skyCorr:
+    class: lsst.pipe.tasks.skyCorrection.SkyCorrectionTask
+  isolatedStarAssociation:
+    class: lsst.pipe.tasks.isolatedStarAssociation.IsolatedStarAssociationTask
+    config:
+      connections.source_table_visit: preSourceTable_visit
+  gbdesAstrometricFit:
+    class: lsst.drp.tasks.gbdesAstrometricFit.GbdesAstrometricFitTask
+  fgcmBuildFromIsolatedStars:
+    class: lsst.fgcmcal.fgcmBuildFromIsolatedStars.FgcmBuildFromIsolatedStarsTask
+  fgcmFitCycle:
+    class: lsst.fgcmcal.fgcmFitCycle.FgcmFitCycleTask
+  fgcmOutputProducts:
+    class: lsst.fgcmcal.fgcmOutputProducts.FgcmOutputProductsTask
+  writePreSourceTable:
+    class: lsst.pipe.tasks.postprocess.WriteSourceTableTask
+    config:
+      connections.outputCatalog: preSource
+  transformPreSourceTable:
+    class: lsst.pipe.tasks.postprocess.TransformSourceTableTask
+    config:
+      connections.inputCatalog: preSource
+      connections.outputCatalog: preSourceTable
+  consolidatePreSourceTable:
+    class: lsst.pipe.tasks.postprocess.ConsolidateSourceTableTask
+    config:
+      connections.inputCatalogs: preSourceTable
+      connections.outputCatalog: preSourceTable_visit
+  writeRecalibratedSourceTable:
+    class: lsst.pipe.tasks.postprocess.WriteRecalibratedSourceTableTask
+    config:
+      connections.outputCatalog: source
+  updateVisitSummary:
+    class: lsst.drp.tasks.update_visit_summary.UpdateVisitSummaryTask
+    config:
+      wcs_provider: "tract"
+      photo_calib_provider: "global"
+      background_provider: "replacement"
+  measure:
+    class: lsst.pipe.tasks.multiBand.MeasureMergedCoaddSourcesTask
+    config:
+      connections.sourceTableHandles: preSourceTable_visit
+subsets:
+  # This pipeline file only defines subsets that have a consistent or
+  # near-consistent definition as a set of tasks, for use by downstream
+  # pipelines as way to include or exclude those tasks.  It does not (and
+  # should not) contain "step" subsets aimed at splitting up a processing
+  # campaign.
+  fgcm:
+    subset:
+      - fgcmBuildFromIsolatedStars
+      - fgcmFitCycle
+      - fgcmOutputProducts
+    description: |
+      Subset that includes all FGCM tasks.
+  preSourceTable:
+    subset:
+      - writePreSourceTable
+      - transformPreSourceTable
+      - consolidatePreSourceTable
+    description: >
+      Set of tasks to generate parquet PreSource Tables, from single-visit
+      processing steps only.
+  sourceTable:
+    subset:
+      - writeRecalibratedSourceTable
+    description: >
+      Set of tasks to generate parquet Source Tables, using final
+      calibrations.

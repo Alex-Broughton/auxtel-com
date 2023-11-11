@@ -1,0 +1,74 @@
+bpsUseShared: true
+bps_cmdline:
+  runWmsSubmissionChecks: true
+bps_defined:
+  operator: abrought
+  submitPath: /sdf/home/a/abrought/auxtel-com/submit/u/abrought/auxtel-drp.2023.08.03.extended.stampSize_101.samplingSize5/20231028T192625Z
+  timestamp: 20231028T192625Z
+  uniqProcName: u_abrought_auxtel-drp.2023.08.03.extended.stampSize_101.samplingSize5_20231028T192625Z
+campaign: quick
+cloud: {}
+cluster: {}
+clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.single_quantum_clustering
+computeSite: s3df
+createQuantumGraph: ${CTRL_MPEXEC_DIR}/bin/pipetask {qgraphPreCmdOpts} qgraph -b {butlerConfig}
+  {pipetaskInput} {pipetaskOutput} --output-run {outputRun} -p {pipelineYaml} -q {qgraphFile}
+  {pipetaskDataQuery} {extraQgraphOptions}
+defaultPreCmdOpts: --long-log --log-level=VERBOSE
+executionButler:
+  command1: ${DAF_BUTLER_DIR}/bin/butler {mergePreCmdOpts} transfer-datasets {executionButlerDir}
+    {butlerConfig} --collections {outputRun} --register-dataset-types
+  command2: ${DAF_BUTLER_DIR}/bin/butler {mergePreCmdOpts} collection-chain {butlerConfig}
+    {output} --flatten --mode=extend {inCollection}
+  command3: ${DAF_BUTLER_DIR}/bin/butler {mergePreCmdOpts} collection-chain {butlerConfig}
+    {output} --flatten --mode=prepend {outputRun}
+  concurrencyLimit: db_limit
+  createCommand: ${CTRL_MPEXEC_DIR}/bin/pipetask qgraph -b {butlerConfig} {pipetaskInput}
+    {pipetaskOutput} --output-run {outputRun} --save-execution-butler {executionButlerDir}
+    -g {qgraphFile}
+  implementation: JOB
+  mergePreCmdOpts: '{defaultPreCmdOpts}'
+  whenCreate: SUBMIT
+  whenMerge: ALWAYS
+executionButlerTemplate: '{submitPath}/EXEC_REPO-{uniqProcName}'
+fileDistributionEndPoint: ''
+initPreCmdOpts: '{defaultPreCmdOpts}'
+payload:
+  butlerConfig: /repo/embargo
+  dataQuery: instrument='LATISS' AND detector IN (0)
+  inCollection: LATISS/runs/AUXTEL_DRP_IMAGING_2023-08A-07AB-05AB/w_2023_33/PREOPS-3613,LATISS/runs/AUXTEL_DRP_IMAGING_2023-08A-07AB-05AB/w_2023_19/PREOPS-3598,LATISS/runs/AUXTEL_DRP_IMAGING_2023-08ABC-07AB-05AB/w_2023_35/PREOPS-3726,LATISS/runs/AUXTEL_DRP_IMAGING_2023-09A-08ABC-07AB-05AB/d_2023_09_25/PREOPS-3780
+  output: u/{operator}/{payloadName}
+  outputRun: '{output}/{timestamp}'
+  payloadName: auxtel-drp.2023.08.03.extended.stampSize_101.samplingSize5
+  runInit: true
+pipelineYaml: /sdf/home/a/abrought/auxtel-com/config/drp-reprocess.yaml
+pipetask:
+  pipetaskInit:
+    runQuantumCommand: ${CTRL_MPEXEC_DIR}/bin/pipetask {initPreCmdOpts} run -b {butlerConfig}
+      {pipetaskInput} {pipetaskOutput} --output-run {outputRun} --qgraph {fileDistributionEndPoint}{qgraphFile}
+      --qgraph-id {qgraphId} --qgraph-node-id {qgraphNodeId} --clobber-outputs --init-only
+      --extend-run {extraInitOptions}
+pipetaskDataQuery: -d "{dataQuery}"
+pipetaskInput: -i {inCollection}
+pipetaskOutput: -o {output}
+preemptible: true
+project: dev
+qgraphFileTemplate: '{uniqProcName}.qgraph'
+qgraphPreCmdOpts: '{defaultPreCmdOpts}'
+requestCpus: 1
+requestMemory: 2048
+runPreCmdOpts: '{defaultPreCmdOpts}'
+runQuantumCommand: ${CTRL_MPEXEC_DIR}/bin/pipetask {runPreCmdOpts} run -b {butlerConfig}
+  {pipetaskInput} {pipetaskOutput} --output-run {outputRun} --qgraph {fileDistributionEndPoint}{qgraphFile}
+  --qgraph-id {qgraphId} --qgraph-node-id {qgraphNodeId} --clobber-outputs --skip-init-writes
+  --extend-run {extraRunQuantumOptions}
+saveClusteredQgraph: false
+saveDot: false
+saveGenericWorkflow: false
+site: {}
+subDirTemplate: '{label}/{tract}/{patch}/{band}/{subfilter}/{physical_filter}/{visit}/{exposure}'
+submitPath: ${PWD}/submit/{outputRun}
+templateDataId: '{tract}_{patch}_{band}_{visit}_{exposure}_{detector}'
+useLazyCommands: true
+whenSaveJobQgraph: NEVER
+wmsServiceClass: lsst.ctrl.bps.htcondor.HTCondorService

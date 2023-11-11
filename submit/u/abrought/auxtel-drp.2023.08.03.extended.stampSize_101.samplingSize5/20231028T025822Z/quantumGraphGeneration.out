@@ -1,0 +1,25 @@
+/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g14083509ae+5da53588ab/bin/pipetask --long-log --log-level=VERBOSE qgraph -b /repo/embargo -i LATISS/runs/AUXTEL_DRP_IMAGING_2023-08A-07AB-05AB/w_2023_33/PREOPS-3613,LATISS/runs/AUXTEL_DRP_IMAGING_2023-08A-07AB-05AB/w_2023_19/PREOPS-3598,LATISS/runs/AUXTEL_DRP_IMAGING_2023-08ABC-07AB-05AB/w_2023_35/PREOPS-3726,LATISS/runs/AUXTEL_DRP_IMAGING_2023-09A-08ABC-07AB-05AB/d_2023_09_25/PREOPS-3780 -o u/abrought/auxtel-drp.2023.08.03.extended.stampSize_101.samplingSize5 --output-run u/abrought/auxtel-drp.2023.08.03.extended.stampSize_101.samplingSize5/20231028T025822Z -p /sdf/home/a/abrought/auxtel-com/config/drp-reprocess.yaml -q /sdf/home/a/abrought/auxtel-com/submit/u/abrought/auxtel-drp.2023.08.03.extended.stampSize_101.samplingSize5/20231028T025822Z/u_abrought_auxtel-drp.2023.08.03.extended.stampSize_101.samplingSize5_20231028T025822Z.qgraph -d "instrument='LATISS' AND detector IN (0)" 
+
+
+ERROR 2023-10-27T19:58:44.062-07:00 lsst.daf.butler.cli.utils ()(utils.py:1128) - Caught an exception, details are in traceback:
+Traceback (most recent call last):
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g14083509ae+5da53588ab/python/lsst/ctrl/mpexec/cli/cmd/commands.py", line 178, in qgraph
+    if script.qgraph(pipelineObj=pipeline, **kwargs, show=show) is None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g14083509ae+5da53588ab/python/lsst/ctrl/mpexec/cli/script/qgraph.py", line 210, in qgraph
+    qgraph = f.makeGraph(pipelineObj, args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g14083509ae+5da53588ab/python/lsst/ctrl/mpexec/cmdLineFwk.py", line 596, in makeGraph
+    task_defs = list(pipeline.toExpandedPipeline())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/g32b72e6cf3+bf55574c77/python/lsst/pipe/base/pipeline.py", line 761, in toExpandedPipeline
+    taskDefs.append(self._buildTaskDef(label))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/g32b72e6cf3+bf55574c77/python/lsst/pipe/base/pipeline.py", line 789, in _buildTaskDef
+    config.applyConfigOverrides(
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/g32b72e6cf3+bf55574c77/python/lsst/pipe/base/config.py", line 262, in applyConfigOverrides
+    overrides.applyTo(self)
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/g32b72e6cf3+bf55574c77/python/lsst/pipe/base/configOverrides.py", line 292, in applyTo
+    exec(override, None, vars)
+  File "<string>", line 4, in <module>
+AttributeError: 'FinalizeCharacterizationConfig' object has no attribute 'sourceSelector'

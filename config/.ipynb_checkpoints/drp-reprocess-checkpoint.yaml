@@ -1,0 +1,18 @@
+description: stars
+instrument: lsst.obs.lsst.Latiss
+tasks:
+  characterize:
+    class: lsst.pipe.tasks.characterizeImage.CharacterizeImageTask
+    config:
+      python: |
+        config.measurePsf.psfDeterminer['psfex'].stampSize = 101
+        config.measurePsf.makePsfCandidates.kernelSize = 101
+        config.measurePsf.psfDeterminer['psfex'].samplingSize = 5
+  finalize:
+    class: lsst.pipe.tasks.finalizeCharacterization.FinalizeCharacterizationTask 
+    config:
+      python: |
+        config.psf_determiner['piff'].stampSize = 101
+        config.make_psf_candidates.kernelSize = 101
+        config.psf_determiner['piff'].samplingSize = 5
+        config.source_selector['science'].signalToNoise.maximum = None

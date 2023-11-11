@@ -1,0 +1,918 @@
+!<lsst.utils.packages.Packages>
+_libgcc_mutex: '0.1'
+_openmp_mutex: '4.5'
+_sysroot_linux-64_curr_repodata_hack: '3'
+abc: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+aiofiles: 22.1.0
+aiohttp: 3.8.4
+aioinflux: 0.9.0
+aiosignal: 1.3.1
+aiosqlite: 0.19.0
+alabaster: 0.7.13
+alembic: 1.11.1
+alsa-lib: 1.2.8
+anyio: 3.7.1
+aom: 3.5.0
+apr: 1.7.0
+argcomplete: 3.1.1
+argon2-cffi: 21.3.0
+argon2-cffi-bindings: 21.2.0
+argparse: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+array: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+asdf: 2.14.3
+asdf-astropy: 0.4.0
+asdf-coordinates-schemas: 0.2.0
+asdf-standard: 1.0.3
+asdf-transform-schemas: 0.3.0
+asdf-unit-schemas: 0.1.0
+asdf-wcs-schemas: 0.1.1
+asdf_astropy: 0.4.0
+asdf_standard: 1.0.3
+ast: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+asteval: 0.9.30
+astropy: 5.3.1
+astroquery: 0.4.6
+astrowidgets: 0.3.0
+asttokens: 2.2.1
+async-timeout: 4.0.2
+asyncio: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+atexit: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+atk-1.0: 2.38.0
+attr: 2.5.1
+attrs: 23.1.0
+autograd: 1.6.2
+aws-c-auth: 0.7.0
+aws-c-cal: 0.6.0
+aws-c-common: 0.8.23
+aws-c-compression: 0.2.17
+aws-c-event-stream: 0.3.1
+aws-c-http: 0.7.11
+aws-c-io: 0.13.28
+aws-c-mqtt: 0.8.14
+aws-c-s3: 0.3.13
+aws-c-sdkutils: 0.1.11
+aws-checksums: 0.1.16
+aws-crt-cpp: 0.20.3
+aws-sam-translator: 1.72.0
+aws-sdk-cpp: 1.10.57
+aws-xray-sdk: 2.12.0
+babel: 2.12.1
+backcall: 0.2.0
+backoff: 2.2.1
+backports: '1.0'
+backports.functools_lru_cache: 1.6.5
+backports.zoneinfo: 0.2.1
+base64: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+bcrypt: 3.2.2
+beautifulsoup4: 4.12.2
+binascii: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+binutils: '2.40'
+binutils_impl_linux-64: '2.40'
+binutils_linux-64: '2.40'
+bisect: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+black: 23.7.0
+bleach: 6.0.0
+blinker: 1.6.2
+blosc: 1.21.4
+bokeh: 3.2.0
+boltons: 23.0.0
+boost: 1.78.0
+boost-cpp: 1.78.0
+boto3: 1.28.3
+botocore: 1.31.3
+bottleneck: 1.3.7
+brotli: 1.0.9
+brotli-bin: 1.0.9
+brotlipy: 0.7.0
+brunsli: '0.1'
+builtins: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+bz2: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+bzip2: 1.0.8
+c-ares: 1.19.1
+c-blosc2: 2.10.0
+c-compiler: 1.5.2
+ca-certificates: 2023.7.22
+cached-property: 1.5.2
+cached_property: 1.5.2
+cachetools: 5.3.1
+cairo: 1.16.0
+calendar: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+cassandra-driver: 3.28.0
+certifi: 2023.7.22
+cffi: 1.15.1
+cfgv: 3.3.1
+cfitsio: 4.2.0
+cfn-lint: 0.77.10
+charls: 2.4.2
+charset-normalizer: 3.2.0
+ciso8601: 2.3.0
+classad: 10.6.0
+cli_helpers: 2.3.0
+click: 8.1.5
+cloudpickle: 2.2.1
+cmake: 3.26.4
+cmath: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+codecs: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+collections: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC
+  12.2.0]
+colorama: 0.4.6
+colorcet: 3.0.1
+coloredlogs: 15.0.1
+colorsys: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+comm: 0.1.3
+compilers: 1.5.2
+concurrent: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC
+  12.2.0]
+conda: 23.5.2
+conda-package-handling: 2.0.2
+conda-package-streaming: 0.8.0
+conda_env: lsst-scipipe-7.0.1
+configobj: 5.0.8
+configparser: 5.3.0
+contextlib: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC
+  12.2.0]
+contextvars: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC
+  12.2.0]
+contourpy: 1.1.0
+coord: 1.3.0
+copy: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+copyreg: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+coverage: 7.2.7
+coveralls: 1.8.0
+cp_pipe: LOCAL:/sdf/home/a/abrought/alternate_branches/dm_stack/cp_pipe@21fe64b60ce11bfe495e02c51cec4f7d0b8193d7+7a28c90ac6dd0961c950e16f8e953ae7
+cramjam: 2.6.2
+cryptography: 41.0.2
+csv: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+ctrl_bps: g11e1854514+4d546bb202
+ctrl_execute: LOCAL:/sdf/home/a/abrought/alternate_branches/ctrl_execute@8a65b980cb3c745b5c87c8c72b28eb9d90f62528
+ctrl_mpexec: g14083509ae+5da53588ab
+ctrl_platform_s3df: LOCAL:/sdf/home/a/abrought/alternate_branches/ctrl_platform_s3df@85fd9198bc8cad8e8448465028bd99d74b27df0c
+ctypes: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+curl: 8.1.2
+cxx-compiler: 1.5.2
+cycler: 0.11.0
+cython: 0.29.36
+cytoolz: 0.12.0
+daf_base: gf041782ebf+2f66163b1a with boost=unknown
+daf_butler: g1fe38381c6+22eb22c807
+daf_relation: g8a20fa5453+8a13ff89d9
+dask-core: 2023.7.0
+dask-jobqueue: 0.8.2
+dataclasses: '0.8'
+datashader: 0.15.1
+datashape: 0.5.4
+datetime: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+dav1d: 1.2.1
+dbus: 1.13.6
+debugpy: 1.6.7
+decimal: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+decorator: 5.1.1
+defusedxml: 0.7.1
+deprecated: 1.2.14
+difflib: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+dill: 0.3.6
+dis: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+distlib: 0.3.6
+distributed: 2023.7.0
+docker-py: 6.1.3
+docopt: 0.6.2
+documenteer: 0.8.3
+docutils: 0.20.1
+dogpile.cache: 1.2.2
+doxygen: 1.9.7
+dustmaps: 1.0.10
+ecdsa: 0.18.0
+eigen: 3.4.0
+email: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+emcee: 3.1.4
+encodings: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+entrypoints: '0.4'
+enum: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+erfa: 2.0.0.3
+errno: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+esutil: 0.6.10
+eups: 2.2.5
+exceptiongroup: 1.1.2
+execnet: 2.0.2
+executing: 1.2.0
+expat: 2.5.0
+fancycompleter: 0.9.1
+fastavro: 1.8.0
+fastparquet: 2023.7.0
+fcntl: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+ffmpeg: 6.0.0
+fftw: 3.3.10
+filelock: 3.12.2
+firefly-client: 2.8.0
+fitsio: 1.1.10
+fitsverify: '4.20'
+flake8: 6.0.0
+flask: 2.3.2
+flask_cors: 3.0.10
+flit-core: 3.9.0
+fmt: 9.1.0
+fnmatch: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+font-ttf-dejavu-sans-mono: '2.37'
+font-ttf-inconsolata: '3.000'
+font-ttf-source-code-pro: '2.038'
+font-ttf-ubuntu: '0.83'
+fontconfig: 2.14.2
+fonts-conda-ecosystem: '1'
+fonts-conda-forge: '1'
+fonttools: 4.41.0
+fortran-compiler: 1.5.2
+fractions: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+freetype: 2.12.1
+fribidi: 1.0.10
+frozendict: 2.3.8
+frozenlist: 1.4.0
+fsspec: 2023.6.0
+ftplib: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+functools: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+future: 0.18.3
+galsim: 2.4.9
+gc: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+gcc: 11.4.0
+gcc_impl_linux-64: 11.4.0
+gcc_linux-64: 11.4.0
+gdk-pixbuf: 2.42.10
+genericpath: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC
+  12.2.0]
+geomet: 0.2.1.post1
+getcalspec: 2.1.0
+getpass: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+gettext: 0.21.1
+gflags: 2.2.2
+gfortran: 11.4.0
+gfortran_impl_linux-64: 11.4.0
+gfortran_linux-64: 11.4.0
+ghostscript: 9.54.0
+giflib: 5.2.1
+ginga: 4.1.0
+git: 2.41.0
+git-lfs: 3.3.0
+gitdb: 4.0.10
+gitpython: 3.1.32
+glib: 2.76.4
+glib-tools: 2.76.4
+glob: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+globus-sdk: 3.23.0
+glog: 0.6.0
+gmp: 6.2.1
+gmpy2: 2.1.2
+gnutls: 3.7.8
+gprof2dot: 2019.11.30
+graphite2: 1.3.13
+graphql-core: 3.2.3
+graphviz: 8.1.0
+greenlet: 2.0.2
+grp: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+gsl: '2.7'
+gsoap: 2.8.123
+gst-plugins-base: 1.22.3
+gstreamer: 1.22.3
+gtk2: 2.24.33
+gts: 0.7.6
+gwcs: 0.18.3
+gxx: 11.4.0
+gxx_impl_linux-64: 11.4.0
+gxx_linux-64: 11.4.0
+gzip: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+h5py: 3.9.0
+harfbuzz: 7.3.0
+hashlib: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+hdf5: 1.14.1
+healpy: 1.16.3
+healsparse: 1.6.5
+heapq: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+hmac: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+holoviews: 1.16.2
+hpgeom: 0.8.4
+htcondor: 10.6.0
+htcondor-classads: 10.6.0
+htcondor-utils: 10.6.0
+html: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+html5lib: '1.1'
+http: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+humanfriendly: '10.0'
+humanize: 4.7.0
+hvplot: 0.8.4
+hypothesis: 6.81.2
+icu: '72.1'
+idds-client: 1.1.4
+idds-common: 1.1.4
+idds-doma: 1.1.4
+idds-workflow: 1.1.4
+identify: 2.5.24
+idna: '3.4'
+imagecodecs: 2023.1.23
+imageio: 2.31.1
+imagemagick: 7.1.1_12
+imagesize: 1.4.1
+iminuit: 2.22.0
+importlib: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+importlib-metadata: 6.8.0
+importlib-resources: 5.13.0
+importlib_metadata: 6.8.0
+importlib_resources: 5.13.0
+iniconfig: 2.0.0
+inspect: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+io: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+ip_isr: LOCAL:/sdf/home/a/abrought/alternate_branches/dm_stack/ip_isr@6fd0008730975a01e2050171305e0512ff5de211+45925c31ebef574d35cab695986730a4
+ipaddress: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+ipdb: 0.13.13
+ipyevents: 2.0.1
+ipykernel: 6.24.0
+ipympl: 0.9.3
+ipython: 8.14.0
+ipython_genutils: 0.2.0
+ipywidgets: 8.0.7
+isort: 5.12.0
+itertools: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+itsdangerous: 2.1.2
+jaraco.classes: 3.3.0
+jbig: '2.1'
+jedi: 0.18.2
+jeepney: 0.8.0
+jinja2: 3.1.2
+jmespath: 1.0.1
+joblib: 1.3.0
+jq: '1.6'
+jschema-to-python: 1.2.3
+json: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+json5: 0.9.14
+jsondiff: 2.0.0
+jsonpatch: '1.32'
+jsonpickle: 2.2.0
+jsonpointer: '2.0'
+jsonschema: 4.18.3
+jsonschema-spec: 0.2.3
+jsonschema-specifications: 2023.6.1
+jsonschema_specifications: 2023.6.1
+junit-xml: '1.9'
+jupyter: 1.0.0
+jupyter_client: 8.3.0
+jupyter_console: 6.6.3
+jupyter_core: 5.3.1
+jupyter_events: 0.6.3
+jupyter_server: 2.7.0
+jupyter_server_fileid: 0.9.0
+jupyter_server_terminals: 0.4.4
+jupyter_server_ydoc: 0.8.0
+jupyter_ydoc: 0.2.4
+jupyterlab: 3.6.5
+jupyterlab_pygments: 0.2.2
+jupyterlab_server: 2.23.0
+jupyterlab_widgets: 3.0.8
+jxrlib: '1.1'
+kafkit: 0.2.1
+kernel-headers_linux-64: 3.10.0
+keyring: 24.2.0
+keyutils: 1.6.1
+keyword: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+kiwisolver: 1.4.4
+krb5: 1.20.1
+lame: '3.100'
+latexcodec: 2.0.1
+lazy-object-proxy: 1.9.0
+lazy_loader: '0.2'
+lcms2: '2.15'
+ld_impl_linux-64: '2.40'
+lerc: 4.0.0
+libabseil: '20230125.3'
+libaec: 1.0.6
+libapr: 1.7.0
+libapriconv: 1.2.2
+libaprutil: 1.6.1
+libarrow: 12.0.1
+libass: 0.17.1
+libavif: 0.11.1
+libblas: 3.9.0
+libbrotlicommon: 1.0.9
+libbrotlidec: 1.0.9
+libbrotlienc: 1.0.9
+libcap: '2.67'
+libcblas: 3.9.0
+libclang: 15.0.7
+libclang13: 15.0.7
+libcondor_utils: 10.6.0
+libcrc32c: 1.1.2
+libcups: 2.3.3
+libcurl: 8.1.2
+libcxx: 16.0.6
+libcxxabi: 16.0.6
+libdeflate: '1.18'
+libdrm: 2.4.114
+libedit: 3.1.20191231
+libev: '4.33'
+libevent: 2.1.12
+libexpat: 2.5.0
+libffi: 3.4.2
+libflac: 1.4.3
+libgcc-devel_linux-64: 11.4.0
+libgcc-ng: 13.1.0
+libgcrypt: 1.10.1
+libgd: 2.3.3
+libgfortran-ng: 13.1.0
+libgfortran5: 13.1.0
+libglib: 2.76.4
+libgomp: 13.1.0
+libgoogle-cloud: 2.12.0
+libgpg-error: '1.47'
+libgrpc: 1.54.2
+libhwloc: 2.9.1
+libiconv: '1.17'
+libidn2: 2.3.4
+libjpeg-turbo: 2.1.5.1
+liblapack: 3.9.0
+liblapacke: 3.9.0
+libllvm14: 14.0.6
+libllvm15: 15.0.7
+libnghttp2: 1.52.0
+libnsl: 2.0.0
+libnuma: 2.0.16
+libogg: 1.3.4
+libopus: 1.3.1
+libpciaccess: '0.17'
+libpng: 1.6.39
+libpq: '15.3'
+libprotobuf: 3.21.12
+librsvg: 2.56.1
+libsanitizer: 11.4.0
+libsndfile: 1.2.0
+libsodium: 1.0.18
+libsqlite: 3.42.0
+libssh2: 1.11.0
+libstdcxx-devel_linux-64: 11.4.0
+libstdcxx-ng: 13.1.0
+libsystemd0: '253'
+libtasn1: 4.19.0
+libthrift: 0.18.1
+libtiff: 4.5.1
+libtool: 2.4.7
+libunistring: 0.9.10
+libutf8proc: 2.8.0
+libuuid: 2.38.1
+libuv: 1.44.2
+libva: 2.19.0
+libvorbis: 1.3.7
+libvpx: 1.13.0
+libwebp: 1.3.1
+libwebp-base: 1.3.1
+libxcb: '1.15'
+libxkbcommon: 1.5.0
+libxml2: 2.11.4
+libxslt: 1.1.37
+libzlib: 1.2.13
+libzopfli: 1.0.3
+line_profiler: 4.0.3
+linecache: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+linkify-it-py: 2.0.0
+llvm-openmp: 16.0.6
+llvmlite: 0.40.1
+lmfit: 1.2.1
+locale: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+locket: 1.0.0
+log: g1e7d6db67d+8a13ff89d9 with boost=unknown
+log4cxx: 0.11.0
+logging: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+lsst-dd-rtd-theme: 0.2.4
+lsst-documenteer-pipelines: 0.8.3
+lsst-documenteer-technote: 0.8.3
+lsst-efd-client: 0.12.0
+lsst-sphinx-bootstrap-theme: 0.2.2
+lsstdesc.coord: 1.3.0
+lxml: 4.9.3
+lz4-c: 1.9.4
+lzma: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+lzo: '2.10'
+make: '4.3'
+mako: 1.2.4
+markdown: 3.4.3
+markdown-it-py: 3.0.0
+markupsafe: 2.1.3
+marshal: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+math: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+matplotlib-base: 3.7.2
+matplotlib-inline: 0.1.6
+mccabe: 0.7.0
+mdit-py-plugins: 0.4.0
+mdurl: 0.1.0
+minuit2: 6.22.06
+minuit2_standalone: 6.22.06
+mistune: 3.0.0
+mkl: 2022.2.1
+mmap: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+more-itertools: 9.1.0
+moto: 4.1.12
+mpc: 1.3.1
+mpfr: 4.2.0
+mpg123: 1.31.3
+mpi: '1.0'
+mpi4py: 3.1.4
+mpmath: 1.3.0
+msgpack-python: 1.0.5
+multidict: 6.0.4
+multipledispatch: 0.6.0
+multiprocessing: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17)
+  [GCC 12.2.0]
+munge: 0.5.13
+munkres: 1.1.4
+mypy: 1.4.1
+mypy_extensions: 1.0.0
+mysql-common: 8.0.33
+mysql-libs: 8.0.33
+mysqlclient: 2.2.0
+nbclassic: 1.0.0
+nbclient: 0.8.0
+nbconvert: 7.6.0
+nbconvert-core: 7.6.0
+nbconvert-pandoc: 7.6.0
+nbformat: 5.9.1
+ncurses: '6.4'
+ndarray: 1.6.4
+nest-asyncio: 1.5.6
+nettle: 3.8.1
+networkx: 2.8.8
+nodeenv: 1.8.0
+nose: 1.3.7
+notebook: 6.5.4
+notebook-shim: 0.2.3
+nspr: '4.35'
+nss: '3.89'
+ntpath: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+numba: 0.57.1
+numbers: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+numexpr: 2.8.4
+numpy: 1.24.4
+numpydoc: 1.5.0
+oniguruma: 6.9.8
+opcode: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+openapi-schema-validator: 0.6.0
+openapi-spec-validator: 0.6.0
+openh264: 2.3.1
+openjpeg: 2.5.0
+openmpi: 4.1.5
+openssl: 3.1.3
+operator: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+orc: 1.9.0
+os: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+overrides: 7.3.1
+p11-kit: 0.24.1
+packaging: '23.1'
+panda-client: 1.5.62
+pandas: 2.0.3
+pandoc: 3.1.3
+pandocfilters: 1.5.0
+panel: 1.2.0
+pango: 1.50.14
+param: 1.13.0
+paramiko: 3.2.0
+parsl: 2023.6.12
+parso: 0.8.3
+partd: 1.4.0
+pathable: 0.4.3
+pathlib: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+pathspec: 0.11.1
+patsy: 0.5.3
+pbr: 5.11.1
+pcre2: '10.40'
+pdbpp: 0.10.3
+pendulum: 2.1.2
+pep8: 1.7.1
+pep8-naming: 0.13.3
+perl: 5.32.1
+pex_config: g733a212e47+bfb0567752
+pex_exceptions: gdaeeff99f8+452a7372b1 with boost=unknown
+pexpect: 4.8.0
+pgcli: 3.5.0
+pgplot: 5.2.2
+pgspecial: 2.1.0
+photutils: 1.8.0
+pickle: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+pickleshare: 0.7.5
+piff: 1.3.3
+pillow: 10.0.0
+pip: '23.2'
+pipe_base: g32b72e6cf3+bf55574c77
+pixman: 0.40.0
+pkg-config: 0.29.2
+pkgutil: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+pkgutil-resolve-name: 1.3.10
+platform: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+platformdirs: 3.1.1
+pluggy: 1.2.0
+ply: '3.11'
+pooch: 1.7.0
+posix: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+posixpath: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+postgresql: '15.3'
+pprint: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+pre-commit: 3.3.3
+prmon: 3.0.2
+progressbar2: 4.2.0
+proj: 9.2.1
+prometheus_client: 0.17.1
+prompt-toolkit: 3.0.39
+prompt_toolkit: 3.0.39
+psutil: 5.9.5
+psycopg: 3.1.9
+psycopg-c: 3.1.9
+psycopg2: 2.9.6
+pthread-stubs: '0.4'
+ptyprocess: 0.7.0
+pulseaudio-client: '16.1'
+pure_eval: 0.2.2
+pwd: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+py-cpuinfo: 9.0.0
+pyarrow: 12.0.1
+pyasn1: 0.4.8
+pybind11: 2.10.4
+pybind11-global: 2.10.4
+pybtex: 0.24.0
+pybtex-docutils: 1.0.2
+pycodestyle: 2.10.0
+pycosat: 0.6.4
+pycparser: '2.21'
+pyct: 0.4.6
+pyct-core: 0.4.6
+pydantic: 1.10.11
+pydocstyle: 6.3.0
+pyerfa: 2.0.0.3
+pyexpat: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+pyflakes: 3.0.1
+pygments: 2.15.1
+pyjwt: 2.7.0
+pyld: 2.0.3
+pynacl: 1.5.0
+pyopenssl: 23.2.0
+pyparsing: 3.0.9
+pyproj: 3.6.0
+pyproject_hooks: 1.0.0
+pyqt: 5.15.7
+pyqt5-sip: 12.11.0
+pyrepl: 0.9.0
+pysocks: 1.7.1
+pysynphot: 2.0.0
+pytables: 3.8.0
+pytest: 7.4.0
+pytest-arraydiff: 0.5.0
+pytest-astropy: 0.10.0
+pytest-astropy-header: 0.2.2
+pytest-cov: 4.1.0
+pytest-doctestplus: 0.13.0
+pytest-filter-subpackage: 0.1.1
+pytest-mock: 3.11.1
+pytest-openfiles: 0.5.0
+pytest-profiling: 1.7.0
+pytest-remotedata: 0.4.0
+pytest-runner: 6.0.0
+pytest-session2file: 0.1.11
+pytest-subtests: 0.11.0
+pytest-vcr: 1.0.2
+pytest-xdist: 3.3.1
+python: 3.11.4
+python-build: 0.10.0
+python-dateutil: 2.8.2
+python-fastjsonschema: 2.17.1
+python-htcondor: 10.6.0
+python-jose: 3.3.0
+python-json-logger: 2.0.7
+python-tzdata: '2023.3'
+python-utils: 3.7.0
+python_abi: '3.11'
+pytorch: 2.0.0
+pytz: '2023.3'
+pytzdata: '2020.1'
+pyviz_comms: 2.3.2
+pyvo: 1.4.1
+pywavelets: 1.4.1
+pywin32-on-windows: 0.1.0
+pyyaml: '6.0'
+pyzmq: 25.1.0
+qt-main: 5.15.8
+qtconsole: 5.4.3
+qtconsole-base: 5.4.3
+qtpy: 2.3.1
+queue: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+quopri: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+random: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+rdma-core: '28.9'
+re: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+re2: 2023.03.02
+readline: '8.2'
+referencing: 0.29.1
+regex: 2023.6.3
+reprlib: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+requests: 2.31.0
+resource: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+resources: g9349d46f9b+8a13ff89d9
+responses: 0.23.1
+rfc3339-validator: 0.1.4
+rfc3339_validator: 0.1.4
+rfc3986-validator: 0.1.1
+rfc3986_validator: 0.1.1
+rhash: 1.4.3
+ripgrep: 13.0.0
+rpds-py: 0.8.10
+rsa: '4.9'
+ruamel.yaml: 0.17.32
+ruamel.yaml.clib: 0.2.7
+rubin-env: 7.0.1
+rubin-env-developer: 7.0.1
+rubin-env-nosysroot: 7.0.1
+ruff: 0.0.278
+runpy: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+s2n: 1.3.46
+s3transfer: 0.6.1
+sarif-om: 1.0.4
+schwimmbad: 0.3.2
+scikit-image: 0.21.0
+scikit-learn: 1.3.0
+scipy: 1.10.1
+scitokens-cpp: 0.7.1
+scons: 4.5.2
+seaborn: 0.12.2
+seaborn-base: 0.12.2
+secrets: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+secretstorage: 3.3.3
+select: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+selectors: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+semantic_version: 2.10.0
+send2trash: 1.8.2
+setproctitle: 1.3.2
+setuptools: 68.0.0
+setuptools-scm: 7.1.0
+shlex: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+shutil: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+signal: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+sip: 6.7.9
+site: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+six: 1.16.0
+skyproj: 1.1.0
+sleef: 3.5.1
+smmap: 3.0.5
+snakeviz: 2.2.0
+snappy: 1.1.10
+sniffio: 1.3.0
+snowballstemmer: 2.2.0
+socket: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+sortedcontainers: 2.4.0
+soupsieve: 2.3.2.post1
+spdlog: 1.11.0
+spherematch: 0.10.1
+sphgeom: g877625a462+434c804113
+sphinx: 7.0.1
+sphinx-automodapi: 0.15.0
+sphinx-click: 4.4.0
+sphinx-jinja: 2.0.2
+sphinx-prompt: 1.4.0
+sphinxcontrib-applehelp: 1.0.4
+sphinxcontrib-autoprogram: 0.1.5
+sphinxcontrib-bibtex: 2.5.0
+sphinxcontrib-devhelp: 1.0.2
+sphinxcontrib-doxylink: 1.12.2
+sphinxcontrib-htmlhelp: 2.0.1
+sphinxcontrib-jquery: '4.1'
+sphinxcontrib-jsmath: 1.0.1
+sphinxcontrib-qthelp: 1.0.3
+sphinxcontrib-serializinghtml: 1.1.5
+sqlalchemy: 2.0.18
+sqlite: 3.42.0
+sqlite3: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+sqlparse: 0.4.4
+sshpubkeys: 3.3.1
+ssl: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+stack_data: 0.6.2
+starlink-ast: 9.2.10
+stat: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+statsmodels: 0.14.0
+stevedore: 5.1.0
+stomp.py: 8.0.1
+string: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+struct: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+subprocess: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC
+  12.2.0]
+svt-av1: 1.6.0
+sympy: '1.12'
+sys: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+sysconfig: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+sysroot_linux-64: '2.17'
+tabulate: 0.9.0
+tarfile: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+tbb: 2021.9.0
+tblib: 1.7.0
+tempfile: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+terminado: 0.17.1
+termios: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+textwrap: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+threading: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+threadpoolctl: 3.2.0
+tifffile: 2023.7.10
+time: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+tinycss2: 1.2.1
+tk: 8.6.12
+token: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+tokenize: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+toml: 0.10.2
+tomli: 2.0.1
+toolz: 0.12.0
+torchvision: 0.15.2
+tornado: 6.3.2
+tqdm: 4.65.0
+traceback: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+traitlets: 5.9.0
+treecorr: 4.3.3
+treegp: 0.6.0
+typeguard: 2.13.3
+types: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+types-cryptography: 3.3.23.2
+types-deprecated: 1.2.9.2
+types-docutils: 0.20.0.1
+types-enum34: 1.1.8
+types-ipaddress: 1.0.8
+types-paramiko: 3.2.0.0
+types-pkg_resources: 0.1.3
+types-python-dateutil: 2.8.19.13
+types-pyyaml: 6.0.12.10
+types-requests: 2.31.0.1
+types-setuptools: 68.0.0.1
+types-six: 1.16.21.8
+types-urllib3: 1.26.25.13
+typing: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+typing-extensions: 4.7.1
+typing_extensions: 4.7.1
+typing_utils: 0.1.0
+tzcode: 2023c
+tzdata: 2023c
+uc-micro-py: 1.0.1
+ucx: 1.14.1
+ukkonen: 1.0.1
+uncertainties: 3.1.7
+unicodedata: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC
+  12.2.0]
+unittest: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+uritemplate: 4.1.1
+urllib: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+urllib3: 1.26.15
+utils: g4b479e1fae+434c804113
+uuid: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+vcrpy: 5.0.0
+virtualenv: 20.21.1
+voms: 2.1.0rc3
+warnings: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+wcslib: '7.12'
+wcwidth: 0.2.6
+weakref: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+webencodings: 0.5.1
+websocket-client: 1.6.1
+werkzeug: 2.3.6
+wheel: 0.40.0
+widgetsnbextension: 4.0.8
+wmctrl: '0.4'
+wrapt: 1.15.0
+ws4py: 0.5.1
+x264: 1!164.3095
+x265: '3.5'
+xarray: 2023.6.0
+xcb-util: 0.4.0
+xcb-util-image: 0.4.0
+xcb-util-keysyms: 0.4.0
+xcb-util-renderutil: 0.3.9
+xcb-util-wm: 0.4.1
+xkeyboard-config: '2.39'
+xml: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+xmltodict: 0.13.0
+xorg-fixesproto: '5.0'
+xorg-kbproto: 1.0.7
+xorg-libice: 1.0.10
+xorg-libsm: 1.2.3
+xorg-libx11: 1.8.6
+xorg-libxau: 1.0.11
+xorg-libxdmcp: 1.1.3
+xorg-libxext: 1.3.4
+xorg-libxfixes: 5.0.3
+xorg-libxrender: 0.9.11
+xorg-libxt: 1.3.0
+xorg-renderproto: 0.11.1
+xorg-xextproto: 7.3.0
+xorg-xf86vidmodeproto: 2.3.1
+xorg-xproto: 7.0.31
+xpa: 2.1.20
+xyzservices: 2023.7.0
+xz: 5.2.6
+y-py: 0.5.9
+yaml: 0.2.5
+yaml-cpp: 0.7.0
+yarl: 1.9.2
+ypy-websocket: 0.8.2
+zeromq: 4.3.4
+zfp: 1.0.0
+zict: 3.0.0
+zipfile: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+zipimport: 3.11.4 | packaged by conda-forge | (main, Jun 10 2023, 18:08:17) [GCC 12.2.0]
+zipp: 3.16.2
+zlib: 1.2.13
+zlib-ng: 2.0.7
+zstandard: 0.19.0
+zstd: 1.5.2

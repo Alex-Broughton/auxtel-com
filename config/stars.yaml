@@ -1,4 +1,5 @@
 description: stars
+instrument: lsst.obs.lsst.Latiss
 tasks:
   isr:
     class: lsst.ip.isr.isrTask.IsrTask
@@ -19,8 +20,8 @@ tasks:
       doStrayLight: false
       doFlat: true
       doFringe: false
-      #doApplyGains: true
-      usePtcGains: false
+      doApplyGains: false
+      #usePtcGains: true
       brighterFatterApplyGain: true
       doFluxConservingBrighterFatterCorrection: True
       doDefect: true
@@ -32,8 +33,11 @@ tasks:
       doDeferredCharge: false
       brighterFatterMaxIter: 10
       overscan.fitType: 'MEDIAN_PER_ROW' 
-  characterizeSpots:
-    class: mixcoatl.characterizeSpots.CharacterizeSpotsTask
+  characterize:
+    class: lsst.pipe.tasks.characterizeImage.CharacterizeImageTask
     config:
       connections.exposure: 'postISRCCD'
-      connections.sourceCat: 'spotSrc'
+      doWrite: true
+  calibrate:
+    class: lsst.pipe.tasks.calibrateImage.CalibrateImageTask
+

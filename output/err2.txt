@@ -1,0 +1,126 @@
+lsst.daf.butler.cli.utils ERROR: Caught an exception, details are in traceback:
+Traceback (most recent call last):
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1030, in makeDatasetTypesSet
+    datasetType = registry.getDatasetType(c.name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/_registry_shim.py", line 163, in getDatasetType
+    return self._registry.getDatasetType(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/registries/sql.py", line 432, in getDatasetType
+    storage = self._managers.datasets[parent_name]
+              ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/registry/interfaces/_datasets.py", line 452, in __getitem__
+    raise MissingDatasetTypeError(f"Dataset type with name '{name}' not found.")
+lsst.daf.butler.registry._exceptions.MissingDatasetTypeError: "Dataset type with name 'ps1_pv3_3pi_20170110' not found."
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cli/cmd/commands.py", line 199, in run
+    if (qgraph := script.qgraph(pipelineObj=pipeline, **kwargs, show=show)) is None:
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cli/script/qgraph.py", line 210, in qgraph
+    qgraph = f.makeGraph(pipelineObj, args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cmdLineFwk.py", line 622, in makeGraph
+    qgraph = graphBuilder.makeGraph(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/graphBuilder.py", line 1797, in makeGraph
+    scaffolding = _PipelineScaffolding(pipeline, registry=self.registry)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/graphBuilder.py", line 863, in __init__
+    datasetTypes = PipelineDatasetTypes.fromPipeline(pipeline, registry=registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1325, in fromPipeline
+    thisTask = TaskDatasetTypes.fromTaskDef(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1180, in fromTaskDef
+    prerequisites=makeDatasetTypesSet("prerequisiteInputs", is_input=True),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1032, in makeDatasetTypesSet
+    raise LookupError(
+LookupError: DatasetType 'ps1_pv3_3pi_20170110' referenced by CalibrateImageConnections uses 'skypix' as a dimension placeholder, but does not already exist in the registry.  Note that reference catalog names are now used as the dataset type name instead of 'ref_cat'.
+lsst.daf.butler.cli.utils ERROR: Caught an exception, details are in traceback:
+Traceback (most recent call last):
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1030, in makeDatasetTypesSet
+    datasetType = registry.getDatasetType(c.name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/_registry_shim.py", line 163, in getDatasetType
+    return self._registry.getDatasetType(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/registries/sql.py", line 432, in getDatasetType
+    storage = self._managers.datasets[parent_name]
+              ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/registry/interfaces/_datasets.py", line 452, in __getitem__
+    raise MissingDatasetTypeError(f"Dataset type with name '{name}' not found.")
+lsst.daf.butler.registry._exceptions.MissingDatasetTypeError: "Dataset type with name 'ps1_pv3_3pi_20170110' not found."
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cli/cmd/commands.py", line 199, in run
+    if (qgraph := script.qgraph(pipelineObj=pipeline, **kwargs, show=show)) is None:
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cli/script/qgraph.py", line 210, in qgraph
+    qgraph = f.makeGraph(pipelineObj, args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cmdLineFwk.py", line 622, in makeGraph
+    qgraph = graphBuilder.makeGraph(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/graphBuilder.py", line 1797, in makeGraph
+    scaffolding = _PipelineScaffolding(pipeline, registry=self.registry)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/graphBuilder.py", line 863, in __init__
+    datasetTypes = PipelineDatasetTypes.fromPipeline(pipeline, registry=registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1325, in fromPipeline
+    thisTask = TaskDatasetTypes.fromTaskDef(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1180, in fromTaskDef
+    prerequisites=makeDatasetTypesSet("prerequisiteInputs", is_input=True),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1032, in makeDatasetTypesSet
+    raise LookupError(
+LookupError: DatasetType 'ps1_pv3_3pi_20170110' referenced by CalibrateImageConnections uses 'skypix' as a dimension placeholder, but does not already exist in the registry.  Note that reference catalog names are now used as the dataset type name instead of 'ref_cat'.
+lsst.daf.butler.cli.utils ERROR: Caught an exception, details are in traceback:
+Traceback (most recent call last):
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1030, in makeDatasetTypesSet
+    datasetType = registry.getDatasetType(c.name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/_registry_shim.py", line 163, in getDatasetType
+    return self._registry.getDatasetType(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/registries/sql.py", line 432, in getDatasetType
+    storage = self._managers.datasets[parent_name]
+              ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/daf_butler/g41038f726f+6851a2a5db/python/lsst/daf/butler/registry/interfaces/_datasets.py", line 452, in __getitem__
+    raise MissingDatasetTypeError(f"Dataset type with name '{name}' not found.")
+lsst.daf.butler.registry._exceptions.MissingDatasetTypeError: "Dataset type with name 'ps1_pv3_3pi_20170110' not found."
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cli/cmd/commands.py", line 199, in run
+    if (qgraph := script.qgraph(pipelineObj=pipeline, **kwargs, show=show)) is None:
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cli/script/qgraph.py", line 210, in qgraph
+    qgraph = f.makeGraph(pipelineObj, args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/ctrl_mpexec/g8a7d0b7f27+3adfb552c9/python/lsst/ctrl/mpexec/cmdLineFwk.py", line 622, in makeGraph
+    qgraph = graphBuilder.makeGraph(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/graphBuilder.py", line 1797, in makeGraph
+    scaffolding = _PipelineScaffolding(pipeline, registry=self.registry)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/graphBuilder.py", line 863, in __init__
+    datasetTypes = PipelineDatasetTypes.fromPipeline(pipeline, registry=registry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1325, in fromPipeline
+    thisTask = TaskDatasetTypes.fromTaskDef(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1180, in fromTaskDef
+    prerequisites=makeDatasetTypesSet("prerequisiteInputs", is_input=True),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/sdf/group/rubin/sw/conda/envs/lsst-scipipe-7.0.1/share/eups/Linux64/pipe_base/gbb42ac716d+7d79062113/python/lsst/pipe/base/pipeline.py", line 1032, in makeDatasetTypesSet
+    raise LookupError(
+LookupError: DatasetType 'ps1_pv3_3pi_20170110' referenced by CalibrateImageConnections uses 'skypix' as a dimension placeholder, but does not already exist in the registry.  Note that reference catalog names are now used as the dataset type name instead of 'ref_cat'.

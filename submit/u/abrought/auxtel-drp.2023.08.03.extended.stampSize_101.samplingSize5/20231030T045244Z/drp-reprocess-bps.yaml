@@ -1,0 +1,13 @@
+pipelineYaml: "/sdf/home/a/abrought/auxtel-com/config/drp-reprocess.yaml"
+
+project: dev
+campaign: quick
+computeSite: s3df
+
+# Make sure these values correspond to ones in the bin/run_demo.sh's
+# pipetask command line.
+payload:
+  payloadName: "auxtel-drp.2023.08.03.extended.stampSize_101.samplingSize5" # defaults to u/abrought/...
+  butlerConfig: "/repo/embargo"
+  inCollection: "LATISS/runs/AUXTEL_DRP_IMAGING_2023-08A-07AB-05AB/w_2023_33/PREOPS-3613,LATISS/runs/AUXTEL_DRP_IMAGING_2023-08A-07AB-05AB/w_2023_19/PREOPS-3598,LATISS/runs/AUXTEL_DRP_IMAGING_2023-08ABC-07AB-05AB/w_2023_35/PREOPS-3726,LATISS/runs/AUXTEL_DRP_IMAGING_2023-09A-08ABC-07AB-05AB/d_2023_09_25/PREOPS-3780"
+  dataQuery: "instrument='LATISS' AND detector IN (0)"

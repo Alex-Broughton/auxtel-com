@@ -1,0 +1,152 @@
+escription: DRP specialized for LATISS surveys
+instrument: lsst.obs.lsst.Latiss
+imports:
+  - location: /sdf/home/a/abrought/auxtel-com/config/DRP-full.yaml
+    include:
+      - isr
+      - characterizeImage
+      - calibrate
+      - writePreSourceTable
+      - transformPreSourceTable
+      - consolidatePreSourceTable
+      - consolidateVisitSummary
+      - isolatedStarAssociation
+      - fgcmBuildFromIsolatedStars
+      - fgcmFitCycle
+      - fgcmOutputProducts
+      - finalizeCharacterization
+      - updateVisitSummary
+      - makeCcdVisitTable
+      - makeVisitTable
+      - transformSourceTable
+      - consolidateSourceTable
+      - writeRecalibratedSourceTable
+      - makeWarp
+      - assembleCoadd
+      - detection
+      - mergeDetections
+      - deblend
+      - measure
+      - mergeMeasurements
+      - writeObjectTable
+      - transformObjectTable
+      - consolidateObjectTable
+      - forcedPhotCoadd
+
+tasks:
+  fgcmFitCycle:
+    class: lsst.fgcmcal.fgcmFitCycle.FgcmFitCycleTask
+    config:
+      doMultipleCycles: true
+      multipleCyclesFinalCycleNumber: 6
+
+  fgcmOutputProducts:
+    class: lsst.fgcmcal.fgcmOutputProducts.FgcmOutputProductsTask
+    config:
+      connections.cycleNumber: 6
+
+  updateVisitSummary:
+    class: lsst.drp.tasks.update_visit_summary.UpdateVisitSummaryTask
+    config:
+      wcs_provider: "input_summary"
+      photo_calib_provider: "global"
+      background_provider: "input_summary"
+
+subsets:
+  step1:
+    subset:
+      - isr
+      - characterizeImage
+      - calibrate
+      - writePreSourceTable
+      - transformPreSourceTable
+    description: |
+      Per-detector tasks that can be run together to start the DRP pipeline.
+      These should never be run with 'tract' or 'patch' as part of the data ID
+      expression if any later steps will also be run, because downstream steps
+      require full visits and 'tract' and 'patch' constraints will always
+      select partial visits that overlap that region (also noting that while
+      this may be moot for a single-detector camera, we would still like to
+      follow best practices envisioned for the full LSST survey).
+
+  step2a:
+    subset:
+      - consolidatePreSourceTable
+      - consolidateVisitSummary
+      - isolatedStarAssociation
+    description: |
+      Global tasks: This is a mix of visit-level and tract-level tasks that
+      must be run with a skymap data query constraint only (an instrument
+      constraint is fine, but generally unnecessary). For example, running
+      with 'tract' (and 'patch') constraints will select partial visits that
+      overlap that region.  A skymap constraint is necessary to prevent
+      isolatedStarAssociation from producing results for all skymaps in the
+      data repository.
+
+      Visit-level: consolidatePreSourceTable, consolidateVisitSummary
+      Tract-level: isolatedStarAssociation
+
+  step2bcde:
+    subset:
+      - finalizeCharacterization
+      - fgcmBuildFromIsolatedStars
+      - fgcmFitCycle
+      - fgcmOutputProducts
+      - updateVisitSummary
+      - makeCcdVisitTable
+      - makeVisitTable
+    description: |
+      Per-visit and per-collection tasks that can be run together after step2a
+      with no data query constraints other than instrument.
+
+      FGCM requires full visits and 'tract' and 'patch' constraints will
+      always select partial visits that overlap that region.
+
+      This includes FGCM because it's configured here to run in "global" mode,
+      which means one should not use a 'tract' expression to constrain it, and
+      if one _did_ run it with a tract constraint (which would be a common
+      occurrence if it was included in any later step).
+
+  step3a:
+    subset:
+      - makeWarp
+      - assembleCoadd
+      - detection
+      - mergeDetections
+      - deblend
+      - measure
+      - mergeMeasurements
+      - forcedPhotCoadd
+      - writeObjectTable
+      - transformObjectTable
+    description: |
+      Tract-level coaddition tasks.  Allowed data query constraints: tract
+      Tasks that can be run together, but only after the 'step1' and 'step2'
+      subsets.  If you do not include tract in the data query, you will get
+      tracts with only partial coverage.
+
+      This subset is considered a workaround for missing middleware and task
+      functionality.  It may be removed in the future.
+
+  step3b:
+    subset:
+      - consolidateObjectTable
+    description: |
+      Tract-level tasks.  Allowed data query constraints: tract
+      Tasks that can be run together, but only after the 'step1', 'step2', and
+      'step3a' subsets (seperation into step3a and step3b is necessary for now
+      as otherwise failues in upstream tasks will cause these to fail.  This is
+      hoped to be a temporary limitation).
+
+  step4:
+    subset:
+      - writeRecalibratedSourceTable
+      - transformSourceTable
+      - consolidateSourceTable
+    description: |
+      Tasks that be run together, but only after the 'step1', 'step2', and
+      'step3' subsets.
+
+      These detector-level tasks should not be run with 'tract' or 'patch' as
+      part of the data ID expression if all reference catalogs are desired,
+      and to ensure that consolidateSourceTable contains complete visits.
